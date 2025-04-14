@@ -4,13 +4,13 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.ucb.ucbtest.counter.CounterUI
-import com.ucb.ucbtest.counter.CounterUIV2
-import com.ucb.ucbtest.gitalias.GitaliasUI
-import com.ucb.ucbtest.home.HomeUI
-import com.ucb.ucbtest.login.LoginUI
-import com.ucb.ucbtest.navigation.AppNavigation
-import com.ucb.ucbtest.takephoto.TakePhotoUI
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import com.ucb.ucbtest.dogsgallery.DogsGalleryUI
+import com.ucb.ucbtest.mars.HomeScreen
+import com.ucb.ucbtest.mars.MarsGalleryScreen
 import com.ucb.ucbtest.ui.theme.UcbtestTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,8 +21,15 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            AppNavigation()
+            UcbtestTheme {
+                DogsGalleryUI()
+//                var selectedCamera by remember { mutableStateOf<String?>(null) }
+//                if (selectedCamera == null) {
+//                    HomeScreen(onNavigateToCamera = { camera -> selectedCamera = camera })
+//                } else {
+//                    MarsGalleryScreen(selectedCamera = selectedCamera)
+//                }
+            }
         }
     }
 }
-

@@ -15,6 +15,8 @@ import com.ucb.ucbtest.login.LoginUI
 import com.ucb.ucbtest.movie.MoviesUI
 import com.ucb.ucbtest.moviedetail.MovieDetailUI
 import com.ucb.ucbtest.takephoto.TakePhotoUI
+import com.ucb.ucbtest.mars.HomeScreen
+import com.ucb.ucbtest.mars.MarsGalleryScreen
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.net.URLDecoder
@@ -26,7 +28,7 @@ fun AppNavigation() {
 
     NavHost(
         navController = navController,
-        startDestination = Screen.MoviesScreen.route,
+        startDestination = Screen.MarsHomeScreen.route,
         enterTransition = { EnterTransition.None },
         exitTransition = { ExitTransition.None },
         popEnterTransition = { EnterTransition.None },
@@ -84,6 +86,21 @@ fun AppNavigation() {
 
         composable(Screen.CounterScreen.route) {
             CounterUI()
+        }
+
+        composable(Screen.MarsHomeScreen.route) {
+            HomeScreen(onNavigateToCamera = { camera ->
+                navController.navigate(Screen.MarsGalleryScreen.createRoute(camera))
+            })
+        }
+
+        composable(
+            route = Screen.MarsGalleryScreen.route,
+            arguments = listOf(navArgument("camera") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val camera = backStackEntry.arguments?.getString("camera")
+            val actualCamera = if (camera == "all") null else camera
+            MarsGalleryScreen(selectedCamera = actualCamera)
         }
 
     }

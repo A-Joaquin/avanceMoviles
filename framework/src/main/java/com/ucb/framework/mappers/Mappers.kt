@@ -1,8 +1,10 @@
 package com.ucb.framework.mappers
 
+import com.ucb.domain.Dog
 import com.ucb.domain.Gitalias
 import com.ucb.domain.Movie
 import com.ucb.framework.dto.AvatarResponseDto
+import com.ucb.framework.dto.DogResponseDto
 import com.ucb.framework.dto.MovieDto
 import com.ucb.framework.persistence.GitAccount
 
@@ -31,3 +33,10 @@ fun MovieDto.toModel(): Movie {
         posterPath = posterPath
     )
 }
+
+//fun DogResponseDto.toModel(): Dog {
+//    return Dog(
+//        imageUrl = message
+//    )
+//}
+
