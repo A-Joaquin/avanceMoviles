@@ -10,6 +10,7 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.detekt)
     alias(libs.plugins.kotlinSerialization) apply false
+    alias(libs.plugins.google.gms.google.services) apply false
 }
 
 subprojects {

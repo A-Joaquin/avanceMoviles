@@ -25,6 +25,9 @@ detekt = "1.23.8"
 kotlinx-serialization = "1.7.3"
 
 room = "2.6.1"
+googleGmsGoogleServices = "4.4.2"
+firebaseMessaging = "24.1.1"
+firebaseMessagingKtx = "24.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -81,6 +84,8 @@ navigation = { group="androidx.navigation", name="navigation-compose", version.r
 hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref="hiltNavViewModel"}
 
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
+firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version.ref = "firebaseMessagingKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -93,6 +98,7 @@ kapt = { id = "org.jetbrains.kotlin.kapt", version.ref="kotlin"}
 android-library = { id = "com.android.library", version.ref = "agp" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt"}
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 
 [bundles]
 room = [ "room-runtime", "room-ktx", "room-rxjava2","room-rxjava3", "room-guava", "room-paging"]

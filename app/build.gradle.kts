@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kapt)
     alias(libs.plugins.hilt)
     alias(libs.plugins.kotlinSerialization)
+    alias(libs.plugins.google.gms.google.services)
 }
 android {
     namespace = "com.ucb.ucbtest"
@@ -48,6 +49,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.firebase.messaging)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -70,6 +72,7 @@ dependencies {
     //serialization
     implementation(libs.kotlinx.serialization.json)
 
+    implementation(libs.firebase.messaging)
 
     implementation(project(":usecases"))
     implementation(project(":domain"))

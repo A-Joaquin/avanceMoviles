@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "165254824069",
+    "project_id": "ucbtest-6e0fd",
+    "storage_bucket": "ucbtest-6e0fd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165254824069:android:61efc668985a39ab8fa9ec",
+        "android_client_info": {
+          "package_name": "com.ucb.ucbtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2qgcoEtxrxlTZCSeb_qfteXHPUVtzafk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
